@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffb900;
+    --second-color: #5f5b53;
+    --font-heading: Sen, sans-serif;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ========= Common ========= */
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 118px;
+    padding: 18px 0;
+    min-width: 118px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 999px;
+    background: var(--primary-color);
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* ========= Header ========= */
+.header {
+    padding-top: 28px;
+    background: #fffcf4;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -28px;
+    left: 0;
+    z-index: 1;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.nav .navbar {
+    margin-left: auto;
+    display: flex;
+}
+
+.navbar a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 21px;
+    color: var(--second-color);
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.navbar a::before {
+    display: block;
+    content: attr(title);
+    font-weight: 600;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.navbar li.active a::after {
+    position: absolute;
+    display: inline-block;
+    bottom: 3px;
+    left: 21px;
+    content: "";
+    width: 12px;
+    height: 2px;
+    border-radius: 1px;
+    background: #171100;
+}
+
+.navbar li.active a,
+.navbar a:hover {
+    color: #171100;
+    font-weight: 600;
+}
+
+.nav .action {
+    margin-left: 49px;
+}
+
+.nav .action-btn {
+    min-width: 144px;
+    background: #171100;
+}
+
+/* ========= Hero ========= */
+.hero-wrap {
+    padding: 56px 0 65px;
+    background: #fffcf4;
+}
+
+.hero-wrap .hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-wrap .hero-left {
+    position: relative;
+    width: 48%;
+}
+
+.hero-left .hero-img {
+    display: block;
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+    /* vertical-align: bottom; */
+}
+
+.hero-left .courses {
+    position: absolute;
+    right: 0;
+    bottom: 48px;
+    padding: 24px;
+    width: 270px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.courses .list-courses {
+    display: flex;
+    align-items: center;
+}
+
+.courses .list-courses + .list-courses {
+    margin-top: 14px;
+}
+
+.courses .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    background: currentColor;
+    border-radius: 50%;
+}
+
+.courses .info-courses {
+    margin-left: 16px;
+}
+
+.courses .courses-label {
+    color: var(--second-color);
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.courses .courses-name {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.hero-wrap .hero-right {
+    width: 52%;
+    padding: 64px 0 0 130px;
+}
+
+.hero-right .heading {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+}
+
+.hero-right .desc {
+    margin-top: 22px;
+    color: var(--second-color);
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.hero-right .hero-actions {
+    margin: 38px 0 48px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.hero-actions .hero-btn {
+    min-width: 180px;
+    padding: 23px 0;
+    font-size: 1.8rem;
+}
+
+.hero-actions .watch-video {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.watch-video .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.07);
+}
+
+.watch-video span {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.hero-right .stats {
+    margin: 8px 0 0 -28px;
+}
+
+.hero-right .stats strong {
+    margin: 0 8px 0 28px;
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+}
