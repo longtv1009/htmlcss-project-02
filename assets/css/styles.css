@@ -61,12 +61,12 @@ a {
     letter-spacing: -0.02em;
 }
 
-.heading.lv1 {
+.heading.heading-lv1 {
     font-size: 5.8rem;
     line-height: 1.17;
 }
 
-.heading.lv2 {
+.heading.heading-lv2 {
     font-size: 3.8rem;
     line-height: 1.26;
 }
@@ -723,6 +723,11 @@ a {
 
 .footer .footer-social .icon {
     display: block;
+    transition: all ease 0.5s;
+}
+
+.footer .footer-social .icon:hover {
+    transform: scale(1.5);
 }
 
 .footer .footer-title {
@@ -755,6 +760,11 @@ a {
     color: #bfbcb2;
     font-size: 1.4rem;
     line-height: 1.86;
+}
+
+.footer .footer-list .footer-item:hover a {
+    text-decoration: underline;
+    color: #fff;
 }
 
 .footer .footer-list .footer-item + .footer-item {
